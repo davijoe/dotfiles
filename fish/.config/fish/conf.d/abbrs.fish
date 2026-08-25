@@ -1,0 +1,16 @@
+abbr -a -- gs 'git status'
+abbr -a -- ld lazydocker
+abbr -a -- lg lazygit
+abbr -a -- gcm 'git commit -m'
+abbr -a -- gaa 'git add --all'
+abbr -a -- . 'nvim .'
+abbr -a -- dps 'docker ps'
+abbr -a -- dka 'cd /home/dan/App/kadk-nextcloud'
+abbr -a -- hypr 'cd /home/dan/.config/hypr/'
+abbr -a -- conf 'cd /home/dan/.config/'
+abbr -a -- ... 'cd ../../'
+abbr -a -- .... 'cd ../../../'
+abbr -a -- ..... 'cd ../../../../'
+abbr -a -- down 'just down'
+abbr -a -- up 'just devenv-deploy'
+abbr -a -- rm 'just devenv-wipe'
