@@ -39,7 +39,7 @@ local firefox = "firefox"
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd("waybar & hyprpaper")
-	hl.exec_cmd("hyprpolkitagent") -- GUI auth prompts (installers, network manager, etc.)
+	hl.exec_cmd("systemctl --user start hyprpolkitagen") -- GUI auth prompts (installers, network manager, etc.)
 	hl.exec_cmd("hypridle") -- idle dimming/locking/suspend, see hypridle.conf
 	hl.exec_cmd("wl-paste --watch cliphist store") -- clipboard history
 end)
