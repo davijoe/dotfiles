@@ -5,6 +5,7 @@ if status is-interactive
 end
 
 fish_add_path $HOME/.local/bin
+zoxide init fish | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/dan/Downloads/google-cloud-sdk/path.fish.inc' ]
