@@ -20,6 +20,7 @@ hl.window_rule({
 	match = { float = true, workspace = "1" },
 	max_size = { 1000, 700 },
 })
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -33,12 +34,8 @@ local firefox = "firefox"
 -------------------
 ---- AUTOSTART ----
 -------------------
+-- https://wiki.hypr.land/Configuring/Basics/Autostart/
 
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
--- Autostart necessary processes (like notifications daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
---
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd("waybar & hyprpaper")
@@ -50,8 +47,7 @@ end)
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
-
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
+-- https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
@@ -65,8 +61,8 @@ hl.env("GDK_BACKEND", "wayland,x11")
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
+
 hl.config({
 	general = {
 		gaps_in = 5,
@@ -89,7 +85,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 10,
+		rounding = 5,
 		rounding_power = 2,
 
 		-- Change transparency of focused and unfocused windows
@@ -162,14 +158,14 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 --     rounding    = 0,
 -- })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
+-- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout
 hl.config({
 	dwindle = {
-		preserve_split = true, -- You probably want this
+		preserve_split = true,
 	},
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
+-- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout
 hl.config({
 	master = {
 		new_status = "master",
@@ -190,7 +186,7 @@ hl.config({
 hl.config({
 	misc = {
 		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
-		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+		disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
 
