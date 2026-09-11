@@ -28,3 +28,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
+
+vim.filetype.add({
+  extension = {
+    sls = "yaml",
+    ["yaml.j2"] = "yaml",
+    ["yml.j2"] = "yaml",
+    j2 = "jinja",
+  },
+})
