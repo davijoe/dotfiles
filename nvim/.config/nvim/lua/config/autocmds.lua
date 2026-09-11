@@ -28,19 +28,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
-
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.sls", "*.yaml.j2", "*.yml.j2" },
-  callback = function()
-    vim.diagnostic.enable(false, { bufnr = 0 })
-  end,
-})
-
-vim.filetype.add({
-  extension = {
-    sls = "yaml",
-    ["yaml.j2"] = "yaml",
-    ["yml.j2"] = "yaml",
-    j2 = "jinja",
-  },
-})
